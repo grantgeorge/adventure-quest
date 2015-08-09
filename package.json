@@ -1,11 +1,12 @@
 {
   "name": "adventureQuest",
-  "version": "0.0.0",
+  "version": "0.0.1",
   "dependencies": {},
   "scripts": {
-    "test": "gulp test"
+    "test": "gulp test",
+    "postinstall": "cd client && bower install --config.interactive=false && gulp build"
   },
-  "devDependencies": {
+  "dependencies": {
     "gulp": "~3.9.0",
     "gulp-autoprefixer": "~2.3.1",
     "gulp-angular-templatecache": "~1.6.0",
@@ -52,6 +53,11 @@
     "wrench": "~1.5.8"
   },
   "engines": {
-    "node": ">=0.10.0"
-  }
+    "node": "0.12.7",
+    "npm": "2.12.1"
+  },
+  "cacheDirectories": [
+    "node_modules",
+    "./client/bower_components"
+  ]
 }
