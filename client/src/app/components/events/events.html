@@ -1,0 +1,14 @@
+<div class="container">
+
+  <div>
+    <acme-navbar creationDate="main.creationDate" />
+  </div>
+
+  <h1>Events</h1>
+
+  <div ng-repeat="event in events">
+    <h2>{{ event.name }}</h2>
+    <p>{{ event.description }}</p>
+  </div>
+
+</div>
