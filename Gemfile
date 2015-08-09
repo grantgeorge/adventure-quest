@@ -38,6 +38,9 @@ group :test, :development do
   gem 'colorize'
   gem 'byebug'
   gem 'web-console'
+
+  gem 'rb-fsevent' if `uname` =~ /Darwin/
+  gem 'growl' if `uname` =~ /Darwin/
 end
 
 group :production, :staging do
