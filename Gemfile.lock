@@ -73,7 +73,6 @@ GEM
     formatador (0.2.5)
     globalid (0.3.6)
       activesupport (>= 4.1.0)
-    growl (1.0.3)
     guard (2.13.0)
       formatador (>= 0.2.4)
       listen (>= 2.7, <= 4.0)
@@ -217,14 +216,12 @@ DEPENDENCIES
   database_cleaner
   factory_girl_rails
   faker
-  growl (= 1.0.3)
   guard-rspec
   pg
   rack-rewrite (= 1.5.1)
   rails (= 4.2.1)
   rails-api
   rails_12factor (= 0.0.3)
-  rb-fsevent (= 0.9.5)
   rspec-rails
   selenium-webdriver (= 2.46.2)
   spring

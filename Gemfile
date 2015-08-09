@@ -44,11 +44,6 @@ group :production, :staging do
   gem 'rails_12factor', '0.0.3'
 end
 
-group :mac, :optional => true do
-  gem 'growl', '1.0.3'
-  gem 'rb-fsevent', '0.9.5'
-end
-
 # Use unicorn as the app server
 # gem 'unicorn'
 
