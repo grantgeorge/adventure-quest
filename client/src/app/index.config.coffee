@@ -1,5 +1,5 @@
 angular.module "adventureQuest"
-  .config ($logProvider, toastr) ->
+  .config ($logProvider, toastr, $authProvider) ->
     # Enable log
     $logProvider.debugEnabled true
     # Set options third-party lib
@@ -7,3 +7,5 @@ angular.module "adventureQuest"
     toastr.options.positionClass = 'toast-top-right'
     toastr.options.preventDuplicates = true
     toastr.options.progressBar = true
+    $authProvider.configure apiUrl: '/api/v1'
+

@@ -2,19 +2,21 @@
   <div class="container-fluid">
     <div class="navbar-header">
       <a class="navbar-brand" href="https://github.com/Swiip/generator-gulp-angular">
-        <span class="glyphicon glyphicon-home"></span> Gulp Angular
+        <span class="glyphicon glyphicon-home"></span> Adventure Quest
       </a>
     </div>
 
     <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-6">
       <ul class="nav navbar-nav">
-        <li class="active"><a ng-href="#">Home</a></li>
-        <li><a ng-href="#">About</a></li>
-        <li><a ng-href="#">Contact</a></li>
+        <li><a ng-href="#">Home</a></li>
+        <li ng-class="{ active: vm.isActive('/about') }"><a ng-href="#">About</a></li>
+        <li ng-class="{ active: vm.isActive('/contact') }"><a ng-href="#">Contact</a></li>
+        <li ng-class="{ active: vm.isActive('/events') }"><a ng-href="#/events">Events</a></li>
       </ul>
 
       <ul class="nav navbar-nav navbar-right acme-navbar-text">
-        <li>Application was created {{ vm.relativeDate }}.</li>
+        <li ng-class="{ active: vm.isActive('/sign_in') }" ng-show="!user.id"><a ng-href="#/sign_in">Sign in</a></li>
+        <li ng-class="{ active: vm.isActive('/sign_up') }" ng-show="user.id"><a ng-click='signOut()'>Sign out</a></li>
       </ul>
     </div>
   </div>

@@ -5,4 +5,5 @@ angular.module 'adventureQuest', ['ngAnimate',
   'ngResource',
   'ui.router',
   'ui.bootstrap',
-  'rails']
+  'rails',
+  'ng-token-auth']

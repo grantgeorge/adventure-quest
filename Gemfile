@@ -4,10 +4,10 @@ ruby '2.2.2'
 # Core
 gem 'rails', '4.2.1'
 gem 'rails-api'
-gem 'active_model_serializers'
-# gem 'devise_token_auth'
+gem 'active_model_serializers', '0.8.3'
+gem 'devise_token_auth'
 # gem 'sdoc', '~> 0.4.0', group: :doc
-# gem 'omniauth'
+gem 'omniauth'
 
 # gem 'puma'
 
