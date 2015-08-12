@@ -32,5 +32,8 @@ module AdventureQuest
         request_specs: false,
         controller_specs: true
     end
+
+    config.middleware.use Rack::Session::Cookie
+
   end
 end

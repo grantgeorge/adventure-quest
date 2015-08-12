@@ -8,6 +8,14 @@ gem 'active_model_serializers', '0.8.3'
 gem 'devise_token_auth'
 # gem 'sdoc', '~> 0.4.0', group: :doc
 gem 'omniauth'
+gem 'omniauth-facebook'
+gem 'omniauth-linkedin'
+gem 'omniauth-twitter'
+gem 'omniauth-google'
+gem 'omniauth-github'
+
+# omniauth-linkedin-jsapi (0.1.2)
+# omniauth-linkedin-oauth2 (0.1.5)
 
 # gem 'puma'
 

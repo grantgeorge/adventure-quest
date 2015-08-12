@@ -1,8 +1,9 @@
 Rails.application.routes.draw do
 
+  resources :rides, except: [:new, :edit]
   scope '/api' do
+    mount_devise_token_auth_for 'User', at: '/v1/auth', skip: [:omniauth_callbacks]
     namespace :v1, defaults: { format: :json } do
-      mount_devise_token_auth_for 'User', at: '/auth'
       resources :events, except: [:new, :edit]
     end
   end

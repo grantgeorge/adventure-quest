@@ -11,6 +11,13 @@ angular.module "adventureQuest"
         url: "/events"
         templateUrl: "app/components/events/events.html"
         controller: "EventsController"
+        resolve: auth: ($auth) ->
+          $auth.validateUser().then((data) ->
+            console.log data
+            return true
+          ).catch (err) ->
+            return false
+          return
 
       .state "login",
         url: "/sign_in"
@@ -21,10 +28,5 @@ angular.module "adventureQuest"
         url: "/sign_up"
         templateUrl: "app/components/registrations/registrations.new.html"
         controller: "UserRegistrationsCtrl"
-        resolve: auth: [
-          '$auth'
-          ($auth) ->
-            $auth.validateUser()
-        ]
 
     $urlRouterProvider.otherwise '/'

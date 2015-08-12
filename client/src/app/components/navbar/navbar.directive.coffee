@@ -1,7 +1,7 @@
 angular.module "adventureQuest"
   .directive 'acmeNavbar', ->
 
-    NavbarController = (moment, $location) ->
+    NavbarController = (moment, $location, $auth, $rootScope) ->
       vm = this
       # "vm.creation" is avaible by directive option "bindToController: true"
       vm.relativeDate = moment(vm.creationDate).fromNow()
@@ -10,7 +10,21 @@ angular.module "adventureQuest"
           true
         else
           false
-      return
+
+      vm.signOut = ->
+        console.log 'signOut func'
+        $auth.signOut().then((resp) ->
+          # handle success response
+          console.log 'sign out success'
+          $location.path '/sign_in'
+          true
+        ).catch (resp) ->
+          # handle error response
+          console.log 'logout error'
+          false
+        return
+
+      return vm
 
     directive =
       restrict: 'E'

@@ -1,22 +1,23 @@
 <nav class="navbar navbar-static-top navbar-inverse">
   <div class="container-fluid">
     <div class="navbar-header">
-      <a class="navbar-brand" href="https://github.com/Swiip/generator-gulp-angular">
+      <a class="navbar-brand" href="#/">
         <span class="glyphicon glyphicon-home"></span> Adventure Quest
       </a>
     </div>
 
     <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-6">
       <ul class="nav navbar-nav">
-        <li><a ng-href="#">Home</a></li>
-        <li ng-class="{ active: vm.isActive('/about') }"><a ng-href="#">About</a></li>
-        <li ng-class="{ active: vm.isActive('/contact') }"><a ng-href="#">Contact</a></li>
-        <li ng-class="{ active: vm.isActive('/events') }"><a ng-href="#/events">Events</a></li>
+        <li><a ng-href="#/">Home</a></li>
+        <li ng-class="{ active: vm.isActive('/about') }"><a ng-href="#/about">About</a></li>
+        <li ng-class="{ active: vm.isActive('/contact') }"><a ng-href="#/contact">Contact</a></li>
+        <li ng-class="{ active: vm.isActive('/events') }"><a ng-href="#/events">Adventures</a></li>
       </ul>
 
       <ul class="nav navbar-nav navbar-right acme-navbar-text">
         <li ng-class="{ active: vm.isActive('/sign_in') }" ng-show="!user.id"><a ng-href="#/sign_in">Sign in</a></li>
-        <li ng-class="{ active: vm.isActive('/sign_up') }" ng-show="user.id"><a ng-click='signOut()'>Sign out</a></li>
+        <li ng-class="{ active: vm.isActive('/sign_up') }" ng-show="!user.id"><a ng-href="#/sign_up">Register</a></li>
+        <li ng-class="{ active: vm.isActive('/sign_out') }"><a ng-click='vm.signOut()'>Sign out</a></li>
       </ul>
     </div>
   </div>
